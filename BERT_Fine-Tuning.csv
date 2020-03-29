@@ -1,0 +1,280 @@
+,활용기술/방법론,update,update(2),update(3),update(4),update(5),commit 1,commit 2,commit 3,commit 4,commit 5,commit 6,commit 7,commit 8,commit 9,commit 10,commit 11,commit 12,commit 13,commit 14,commit 15,commit 16,commit 17,commit 18,commit19,commit 20,commit 21,commit 22
+데이터 가공,"stopwords, 일반약어, punctuation, html/url/이모티콘 제거","품사별 단어의 유의미함이 다를 수 있는 의견 제시됨
+Spacy, nltk 활용한 세부 전처리 
+csv파일에서 더 많은 오타를 찾아낼지 말지 고민
+","알파벳으로 구성되어있지 않은 단어를 배제(정확도 2%가량 상승)
+
+
+",,"punctuation, url, html tag, emoji 제거
+일반약어 필터링
+",update(4) 와 동일,,,,,,,,,,,,,,,,,,,,,,
+모델 설계,"BERT 
+tensorflow-hub 패키지를 통해서 다운받음 
+(bert-en-uncased 12-layer)","tokenization.py 코드 잘못되어있음
+1. tf.gfile -> tf.io.gfile 로 api변경되었는데 적용안되어있음
+2. 돌리는데 시간 너무 오래걸림(2시간넘게)
+
+tokenize, word-embedding 적용안해도 괜찮음","Logistic Regression, Naive Bayes, RandomForest 3 종류 적용
+RandomForest 는 log_loss 값이 셋 중 제일 높기 때문에 
+제일 안맞는 알고리즘으로 확인됨
+
+Naive Bayes 모델 결과값이 제일 우수함
+Naive Bayes 와 RandomForest 의 accuracy 가 동일하게 나오는데 원인은 탐구중","vectorizer vs stack
+
+전자는 bag of words 랑 연관성이 있을 듯
+
+주어진 train 데이터에 test 데이터의 트윗 내용을 
+추가해서 훈련을 시켰을 때 결과가 좋았다 (가설)
+","LSTM  w/ GloVe 
+tensorflow keras",LSTM  w/ tf-idf,BERT,BERT,BERT,BERT,BERT,BERT,BERT,BERT,BERT,BERT,BERT,BERT,BERT,BERT,BERT,BERT,BERT-Baseline,GloVe-BaseLine,BERT,BERT,BERT,BERT
+하이퍼파라미터,"learning_rate = 9e-6
+valid = 0.2
+epochs_num = 3
+batch_size_num = 16
+target_corrected = False
+target_big_corrected = False
+",,,,"learning_rate = 3e-4
+epoch = 10
+drop-out = 0.2
+batch_size = 4
+verbose = 2 (one line per epoch)
+","learning_rate = 3e-4
+epoch = 10
+drop-out = 0.2
+batch_size = 4
+verbose = 2 (one line per epoch)","Dropout_num = 0
+learning_rate = 6e-6
+validation_split = 0.2
+epochs_num = 3
+batch_size_num = 16
+target_corrected = False
+target_big_corrected = False","Dropout_num = 0.3
+learning_rate = 1e-5
+validation_split = 0.2
+epochs_num = 4
+batch_size_num = 5
+target_corrected = False
+target_big_corrected = False","Dropout_num = 0.3
+learning_rate = 2e-5
+validation_split = 0.2
+epochs_num = 4
+batch_size_num = 8
+target_corrected = False
+target_big_corrected = False","Dropout_num = 0.3 
+learning_rate = 3e-5 
+validation_split = 0.2 
+epochs_num = 4 
+batch_size_num = 16 
+target_corrected = False 
+target_big_corrected = False","Dropout_num = 0.2 
+learning_rate = 1e-5 
+validation_split = 0.3 
+epochs_num = 3 
+batch_size_num = 12 
+target_corrected = False 
+target_big_corrected = False","Dropout_num = 0.2 
+learning_rate = 2e-6 
+validation_split = 0.3 
+epochs_num = 3 
+batch_size_num = 12
+target_corrected = False 
+target_big_corrected = False","Dropout_num = 0.2 
+learning_rate = 3e-6 
+validation_split = 0.3 
+epochs_num = 3 
+batch_size_num = 12 
+target_corrected = False 
+target_big_corrected = True","Dropout_num = 0.2 
+learning_rate = 3e-6 
+validation_split = 0.3 
+epochs_num = 4 
+batch_size_num = 10 
+target_corrected = False 
+target_big_corrected = False","Dropout_num = 0.2 
+learning_rate = 1e-6 
+validation_split = 0.3 
+epochs_num = 3 
+batch_size_num = 16 
+target_corrected = False 
+target_big_corrected = True","Dropout_num = 0.2 
+learning_rate = 2e-6 
+validation_split = 0.3 
+epochs_num = 3 
+batch_size_num = 12 
+target_corrected = False 
+target_big_corrected = False","Dropout_num = 0.2 
+learning_rate = 1e-6 
+validation_split = 0.3 
+epochs_num = 3 
+batch_size_num = 20 
+target_corrected = True 
+target_big_corrected = True","Dropout_num = 0.2 
+learning_rate = 2e-6 
+validation_split = 0.3 
+epochs_num = 3 
+batch_size_num = 20 
+target_corrected = True 
+target_big_corrected = True","Dropout_num = 0.1 
+learning_rate = 1e-5 
+validation_split = 0.3 
+epochs_num = 3 
+batch_size_num = 20 
+target_corrected = True 
+target_big_corrected = True","Dropout_num = 0.3 
+learning_rate = 1e-5 
+validation_split = 0.3 
+epochs_num = 3 
+batch_size_num = 20 
+target_corrected = True 
+target_big_corrected = True","Dropout_num = 0.2 
+learning_rate = 3e-6 
+validation_split = 0.3 
+epochs_num = 3 
+batch_size_num = 12 
+target_corrected = False 
+target_big_corrected = False","Dropout_num = 0.2 
+learning_rate = 4e-5 
+validation_split = 0.3 
+epochs_num = 3 
+batch_size_num = 16 
+target_corrected = True 
+target_big_corrected = True","random_state_split = 7
+Dropout_num = 0
+learning_rate = 3e-5
+valid = 0.2
+epochs_num = 3
+batch_size_num = 16","Dropout = 0.2
+learning_rate=3e-4","# Baseline 하이퍼패러미터
+random_state_split = 7
+Dropout_num = 0.3
+learning_rate = 1e-6
+valid = 0.3
+epochs_num = 3
+batch_size_num = 16
+target_corrected = True
+target_big_corrected = True","# Baseline Hyperparameters
+random_state_split = 7
+Dropout_num = 0.3 
+learning_rate = 3e-5 
+validation_split = 0.2 
+epochs_num = 3 
+batch_size_num = 20 
+target_corrected = True 
+target_big_corrected = True","# Customized Hyperparameters
+random_state_split = 7
+Dropout_num = 0.3 
+learning_rate = 1e-5 
+validation_split = 0.2 
+epochs_num = 3 
+batch_size_num = 10 
+target_corrected = True 
+target_big_corrected = True","# Customized Hyperparameters
+random_state_split = 7
+Dropout_num = 0.3 
+learning_rate = 4e-5 
+validation_split = 0.3 
+epochs_num = 3 
+batch_size_num = 18 
+target_corrected = True 
+target_big_corrected = True"
+conf_mat_BERT_00,,,,,,,,"4,130",4153,4131,3994,3992,4165,4047,3902,4078,4058,4017,3922,4098,3959,4358,4144,4012,4144,4137,,
+conf_mat_BERT_01,,,,,,,,663,735,492,748,607,674,713,655,902,811,550,502,526,732,,737,1113,737,742,,
+conf_mat_BERT_10,,,,,,,,212,189,211,348,350,177,295,440,264,300,341,436,260,383,,198,330,198,205,,
+conf_mat_BERT_11,,,,,,,,"2,608",2536,2779,2523,2664,2597,2558,2616,2369,2444,2705,2753,2729,2922,,2534,2158,2534,2529,,
+recall(하늘색은 함수니까 수정하지 말것,,,65.00%,,,,,92.48%,93.06%,92.94%,87.88%,88.39%,93.62%,89.66%,85.60%,89.97%,89.07%,88.80%,86.33%,91.30%,88.41%,,92.75%,86.74%,92.75%,92.50%,,
+precision,,,83.00%,,,,,79.73%,77.53%,84.96%,77.13%,81.44%,79.39%,78.20%,79.98%,72.42%,75.08%,83.10%,84.58%,83.84%,79.97%,,77.47%,65.97%,77.47%,77.32%,,
+f-measurement,,,72.91%,,,,,85.63%,84.59%,88.77%,82.16%,84.77%,85.92%,83.54%,82.69%,80.25%,81.48%,85.86%,85.44%,87.41%,83.98%,,84.42%,74.94%,84.42%,84.23%,,
+accuracy_conf_mat,,,79.00%,,,,,88.51%,87.86%,90.77%,85.60%,87.43%,88.82%,86.76%,85.62%,84.68%,85.41%,88.30%,87.68%,89.68%,86.06%,,87.72%,81.05%,87.72%,87.56%,,
+accuracy,83%,,0.795,,78.10%,57.08%,92.61%,96.54%,96.72%,95.14%,89.30%,88.87%,91.07%,96.34%,84.12%,89.83%,83.88%,86.81%,95.70%,89.89%,89.68%,52.92%,91.56%,,97.32%,93.94%,0.9714,
+val_accuracy,87%,,,,80.50%,56.86%,82.73%,81.16%,83.45%,80.63%,81.74%,82.49%,82.40%,82.53%,82.79%,83.27%,82.49%,83.36%,83.10%,83.27%,82.57%,55.82%,83.39%,,85.33%,82.80%,0.8286,
+loss,,,,,0.4914,0.6833,0.1877,0.0975,0.092,0.139,0.2833,0.2856,0.2268,0.1003,0.373,0.2538,0.37785,0.3203,0.1222,0.2586,0.2573,0.7095,21.71%,,7.95%,16.45%,0.0772,
+val_loss,,,,,0.4657,0.6847,0.4302,0.567,0.536,0.5731,0.497,0.4269,0.4513,0.537,0.399,0.4243,0.4114,0.4084,0.5272,0.4601,0.4039,0.6868,48.74%,,4.88%,45.41%,0.6431,
+log_loss,,,0.494,,,,,,,,,,,,,,,,,,,,,,,,,
+작성자,이지은,이지은,나승주,,이지은,,이지은,이지은,이지은,이지은,이지은,이지은,이지은,김동언,이지은,김동언,이지은,이지은,이지은,이지은,김동언,김동언,나승주,나승주,나승주,,,
+날짜,2020. 3. 17,2020. 3. 17,2020. 3. 17,,2020. 3.18,,2020.3.25,2020.3.25,2020.3.25,2020.3.26,2020.3.26,2020.3.26,2020.3.26,2020.3.26,2020.3.26,2020.3.26,2020.3.26,2020.3.26,2020.3.26,2020.3.26,2020.3.26,2020.3.26,2020.03.27,2020.03.27,,,,
+비고,"BERT 파이참에서 실행해야함 (tokenization.py의 gfile 코드오류)
+BERT-Baseline","향후 데이터 전처리 flow 확립될 경우 edge case 위한 
+문법/탈자 개선작업 tool 및 적용방안 모색","(문어체, 구어체 여부에 따른 target 신뢰도 측정 방안 모색)",,"LSTM 코드는 파이참에서 확인하기
+(가상환경 설정 때문)
+
+3/19 ~ 3/24
+-개인적으로 취업준비 
+
+3/25일~3/27
+- kaggle notebook 작성
+- 기계학습, 딥러닝 변수 통합 작업
+- ppt작업예정
+-여러 알고리즘 적용 테스트
+-결과물 정리
+
+
+####휴가 쓸거면 25일 이전에 쓸 것","GloVe 가 TF-IDF 보다
+성능이 낫다는 것 증명
+
+여러 모델 중에서 BERT가 
+성능이 가장 좋다는 것 확인","dropout 미적용
+
+오버피팅","lr 큰값으로 조정
+epoch + 1
+
+batch_size 10부터 작동하지 않음
+lr, batch-size 크기를 서로 적절하게 설정을 해야 돌아감
+GPU 12GB 기준 적정 batch-size는 12
+
+오버피팅","lr 작은값으로 조정
+dropout 적용(큰차이가안보임)","epoch 4는 너무 많은 학습이 되는 것 같음
+다음은 줄이도록","훈련데이터 양이 많은 것 같아서
+검증 데이터를 늘렸더니 상당히 개선
+
+epoch = 3 으로 줄임","검증데이터 비율 그대로 감
+lr 값을 작게 조절
+
+차이는 좁혀지나 훈련데이터의
+정확도는 점점 떨어지고 검증데이터의
+정확도는 올라가고 있음
+
+recall/precision 비율 나쁘지않음","
+target_big_corrected 적용
+lr 작은 값으로 설정
+
+다시 오버피팅 감",epoch = 4 다시 오버피팅,"target_big_corrected 적용
+batch-size = 16 (+4)
+lr 큰값으로 설정
+epoch = 3으로 줄임
+
+batch-size 값이 커지니
+어느정도 개선되는 점이 보이는것 같음
+
+대신 정확도는 떨어짐","target_big_corrected 를 적용한
+commit 9가 더 성능이 좋음","batch-size = 20(+4)
+target_corrected = True
+설정 변경
+
++ BERT의 경우 batch-size에
+영향을 많이 받는다고 함
+
++ 요즘 자연어 처리에서
+batch-size를 크게 가져가는게 효과적이라는
+의견이있다고 함","lr만 작게 조절
+
+recall/precision 비율이
+한 쪽만 크지않고 가장 적당함
+둘 중에 한쪽만 너무 높게 될 경우
+문제가 된다고 함","The dropout probability is always
+kept at 0.1
+
+batch-size = 25로 했으나 메모리
+부족 문제 발생(GPU 성능문제)
+
+dropout 0.1로 변경
+lr 큰값으로 조정
+
+dropout 0.2 이상 해야할듯
+훈련데이터에 다시 집중된것 같음","dropout만 늘려봄
+commit 13보다 훨씬 나아짐",,"batch size 줄였는데 메모리 부하로 인해 에러 발생
+session restart 후 동작
+
+정확도가 좋지 않은데(오버피팅 발생은 x)
+confusion matrix 에서 100%가 나옴(오류??)
+4358/4358",,,,,,
+이미지,,,,,,,,,,,,,,,,,,,,,,,,,,,,
