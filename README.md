@@ -22,10 +22,12 @@
 
 1. 데이터 파악/처리
   -데이터 탐색(EDA) : numpy, pandas, matplot, seaborn
+  
   -데이터 전처리 : nltk, re, string, gensim
   
 2. 데이터 분석/모델링
   -일반 ML, 일반 신경망 : scikit-learn, keras, sequential
+  
   -BERT : tensorflow 2.0, tensorflow-hub
   
   
