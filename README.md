@@ -1,4 +1,4 @@
-# Twitter Dataset을 이용한 disaster tweet 참/거짓 판별 데이터 분석 모델
+# Real or Not? NLP를 통한 자연재해 Twitter 분류 데이터 분석 
 
 ## 기획배경
 업데이트 된 BERT 기반 NLP 분석을 실험하기 위해 진행한 데이터 분석 프로그램 입니다.
