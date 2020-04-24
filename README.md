@@ -60,10 +60,9 @@ embedding
 
 - 각 팀별로 진행한 경우의 수 history 정리
   
+- Fine-Tuning history : BERT_FineTuning.csv (또는 xlsx파일) 참고
   
-  
-  
-  
+
   
   
   
