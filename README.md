@@ -63,7 +63,18 @@ embedding
   
 - Fine-Tuning history : BERT_FineTuning.csv (또는 xlsx파일) 참고
   
+## 문제점 & 해결방안
+- GPU의 제한된 크기(15GB)로 인해 자연어 처리의 이상적인 batch-size = 32의 설정 불가
+- 해결방안으로 현 스펙에 맞는 최대의 batch-size(22)로 설정, learning-rate 또한 큰값으로 설정하여 최종정확도 83.6% 도출
 
+## 기여도
+- 프로젝트의 전체적인 일정관리
+- BERT와 RNN 베이스라인 설계
+- 오버피팅 조절
+- 코드리뷰는 Slack을 연동하여 사용
+
+## 개선점
+- Tweepy 라이브러리를 통한 twitter 데이터 수령으로 추가 DB확보하여 정확도 향상 
   
   
   
