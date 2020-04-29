@@ -69,7 +69,7 @@ embedding
 
 ## 기여도
 - 프로젝트의 전체적인 일정관리
-- BERT와 RNN 베이스라인 설계
+- [BERT](DNN/BERT_Base.py)와 [RNN](DNN/RNN_GloVe.py) 베이스라인 설계
 - 오버피팅 조절
 - 코드리뷰는 Slack을 연동하여 사용
 
