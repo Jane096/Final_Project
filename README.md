@@ -61,7 +61,7 @@ embedding
 
 - 각 팀별로 진행한 경우의 수 history 정리
   
-- Fine-Tuning history : [BERT Fine_Tuning](Final_Project/Fine_Tuning_History.xlsx) (또는 csv파일) 참고
+- Fine-Tuning history : [BERT Fine_Tuning](Fine_Tuning_History.xlsx) (또는 csv파일) 참고
   
 ## 문제점 & 해결방안
 - GPU의 제한된 크기(15GB)로 인해 자연어 처리의 이상적인 batch-size = 32의 설정 불가
