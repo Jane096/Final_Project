@@ -1,0 +1,223 @@
+,?œìš©ê¸°ìˆ /ë°©ë²•ë¡?update,update(2),update(3),update(4),update(5),commit 1,commit 2,commit 3,commit 4,commit 5,commit 6,commit 7,commit 8,commit 9,commit 10,commit 11,commit 12,commit 13,commit 14,commit 15,commit 16,commit 17,commit 18,
+"?°ì´??ê°€ê³?""stopwords", ?¼ë°˜?½ì–´, punctuation," html/url/?´ëª¨?°ì½˜ ?œê±°""","?ˆì‚¬ë³??¨ì–´??? ì˜ë¯¸í•¨???¤ë? ???ˆëŠ” ?˜ê²¬ ?œì‹œ??Spacy, nltk ?œìš©???¸ë? ?„ì²˜ë¦?
+csv?Œì¼?ì„œ ??ë§ì? ?¤í?ë¥?ì°¾ì•„?¼ì? ë§ì? ê³ ë?
+","?ŒíŒŒë²³ìœ¼ë¡?êµ¬ì„±?˜ì–´?ˆì? ?Šì? 
+?¨ì–´ë¥?ë°°ì œ(?•í™•??2%ê°€???ìŠ¹)
+
+
+",,"punctuation, url, html tag, emoji ?œê±°
+?¼ë°˜?½ì–´ ?„í„°ë§?",update(4) ?€ ?™ì¼,,,,,,,,,,,,,,,,
+ëª¨ë¸ ?¤ê³„,"BERT 
+tensorflow-hub ?¨í‚¤ì§€ë¥??µí•´???¤ìš´ë°›ìŒ 
+(bert-en-uncased 12-layer)","tokenization.py ì½”ë“œ ?˜ëª»?˜ì–´?ˆìŒ
+1. tf.gfile -> tf.io.gfile ë¡?apië³€ê²½ë˜?ˆëŠ”???ìš©?ˆë˜?´ìˆ??2. ?Œë¦¬?”ë° ?œê°„ ?ˆë¬´ ?¤ë˜ê±¸ë¦¼(2?œê°„?˜ê²Œ)
+
+tokenize, word-embedding ?ìš©?ˆí•´??ê´œì°®??,Logistic Regression", Naive Bayes, RandomForest 3 ì¢…ë¥˜ ?ìš©,,,,,,,,,,,,,,,,,,,,
+RandomForest ??log_loss ê°’ì´ ??ì¤??œì¼ ?’ê¸° ?Œë¬¸??,,,,,,,,,,,,,,,,,,,,,,,,
+?œì¼ ?ˆë§???Œê³ ë¦¬ì¦˜?¼ë¡œ ?•ì¸??,,,,,,,,,,,,,,,,,,,,,,,,
+Naive Bayes ëª¨ë¸ ê²°ê³¼ê°’ì´ ?œì¼ ?°ìˆ˜??Naive Bayes ?€ RandomForest ??accuracy ê°€ ,,,,,,,,,,,,,,,,,,,,,,,,
+?™ì¼?˜ê²Œ ?˜ì˜¤?”ë° ?ì¸?€ ?êµ¬ì¤?,"vectorizer vs stack
+
+?„ì??bag of words ???°ê??±ì´ ?ˆì„ ??
+ì£¼ì–´ì§?train ?°ì´?°ì— test ?°ì´?°ì˜ ?¸ìœ— ?´ìš©??
+ì¶”ê??´ì„œ ?ˆë ¨???œì¼°????ê²°ê³¼ê°€ ì¢‹ì•˜??(ê°€??
+","LSTM  w/ GloVe 
+tensorflow keras",LSTM  w/ tf-idf,BERT,BERT-Baseline,GloVe-BaseLine,BERT,BERT,BERT,BERT,BERT,BERT,BERT,BERT,BERT,BERT,BERT,BERT,BERT,BERT,BERT,,,
+"?˜ì´?¼íŒŒ?¼ë???""learning_rate = 9e-6",,,,,,,,,,,,,,,,,,,,,,,,
+valid = 0.2,,,,,,,,,,,,,,,,,,,,,,,,
+epochs_num = 3,,,,,,,,,,,,,,,,,,,,,,,,
+batch_size_num = 16,,,,,,,,,,,,,,,,,,,,,,,,
+target_corrected = False,,,,,,,,,,,,,,,,,,,,,,,,
+target_big_corrected = False,,,,,,,,,,,,,,,,,,,,,,,,
+",,,,learning_rate = 3e-4",,,,,,,,,,,,,,,,,,,,,,,,
+epoch = 10,,,,,,,,,,,,,,,,,,,,,,,,
+drop-out = 0.2,,,,,,,,,,,,,,,,,,,,,,,,
+batch_size = 4,,,,,,,,,,,,,,,,,,,,,,,,
+verbose = 2 (one line per epoch),,,,,,,,,,,,,,,,,,,,,,,,
+",learning_rate = 3e-4",,,,,,,,,,,,,,,,,,,,,,,,
+epoch = 10,,,,,,,,,,,,,,,,,,,,,,,,
+drop-out = 0.2,,,,,,,,,,,,,,,,,,,,,,,,
+batch_size = 4,,,,,,,,,,,,,,,,,,,,,,,,
+"verbose = 2 (one line per epoch)""","Dropout_num = 0
+learning_rate = 6e-6
+validation_split = 0.2
+epochs_num = 3
+batch_size_num = 16
+target_corrected = False
+target_big_corrected = False","random_state_split = 7
+Dropout_num = 0
+learning_rate = 3e-5
+valid = 0.2
+epochs_num = 3
+batch_size_num = 16","Dropout = 0.2
+learning_rate=3e-4","Dropout_num = 0.3 
+learning_rate = 3e-5 
+validation_split = 0.2 
+epochs_num = 4 
+batch_size_num = 16 
+target_corrected = False 
+target_big_corrected = False","Dropout_num = 0.2 
+learning_rate = 1e-5 
+validation_split = 0.3 
+epochs_num = 3 
+batch_size_num = 12 
+target_corrected = False 
+target_big_corrected = False","Dropout_num = 0.2 
+learning_rate = 2e-6 
+validation_split = 0.3 
+epochs_num = 3 
+batch_size_num = 12
+target_corrected = False 
+target_big_corrected = False","Dropout_num = 0.2 
+learning_rate = 3e-6 
+validation_split = 0.3 
+epochs_num = 3 
+batch_size_num = 12 
+target_corrected = False 
+target_big_corrected = True","Dropout_num = 0.2 
+learning_rate = 3e-6 
+validation_split = 0.3 
+epochs_num = 4 
+batch_size_num = 10 
+target_corrected = False 
+target_big_corrected = False","Dropout_num = 0.2 
+learning_rate = 1e-6 
+validation_split = 0.3 
+epochs_num = 3 
+batch_size_num = 16 
+target_corrected = False 
+target_big_corrected = True","Dropout_num = 0.2 
+learning_rate = 2e-6 
+validation_split = 0.3 
+epochs_num = 3 
+batch_size_num = 12 
+target_corrected = False 
+target_big_corrected = False","Dropout_num = 0.2 
+learning_rate = 1e-6 
+validation_split = 0.3 
+epochs_num = 3 
+batch_size_num = 20 
+target_corrected = True 
+target_big_corrected = True","Dropout_num = 0.2 
+learning_rate = 2e-6 
+validation_split = 0.3 
+epochs_num = 3 
+batch_size_num = 20 
+target_corrected = True 
+target_big_corrected = True","Dropout_num = 0.1 
+learning_rate = 1e-5 
+validation_split = 0.3 
+epochs_num = 3 
+batch_size_num = 20 
+target_corrected = True 
+target_big_corrected = True","Dropout_num = 0.3 
+learning_rate = 1e-5 
+validation_split = 0.3 
+epochs_num = 3 
+batch_size_num = 20 
+target_corrected = True 
+target_big_corrected = True","Dropout_num = 0.2 
+learning_rate = 3e-6 
+validation_split = 0.3 
+epochs_num = 3 
+batch_size_num = 12 
+target_corrected = False 
+target_big_corrected = False","Dropout_num = 0.2 
+learning_rate = 4e-5 
+validation_split = 0.3 
+epochs_num = 3 
+batch_size_num = 16 
+target_corrected = True 
+target_big_corrected = True","# Baseline ?˜ì´?¼íŒ¨?¬ë???
+random_state_split = 7
+Dropout_num = 0.3
+learning_rate = 1e-6
+valid = 0.3
+epochs_num = 3
+batch_size_num = 16
+target_corrected = True
+target_big_corrected = True","# Baseline Hyperparameters
+random_state_split = 7
+Dropout_num = 0.3 
+learning_rate = 3e-5 
+validation_split = 0.2 
+epochs_num = 3 
+batch_size_num = 20 
+target_corrected = True 
+target_big_corrected = True",,,,,,
+conf_mat_BERT_00,,,,,,,,4144,4012,4131,3994,3992,4165,4047,3902,4078,4058,4017,3922,4098,3959,4358,4144,4137
+conf_mat_BERT_01,,,,,,,,737,1113,492,748,607,674,713,655,902,811,550,502,526,732,,737,742
+conf_mat_BERT_10,,,,,,,,198,330,211,348,350,177,295,440,264,300,341,436,260,383,,198,205
+conf_mat_BERT_11,,,,,,,,2534,2158,2779,2523,2664,2597,2558,2616,2369,2444,2705,2753,2729,2922,,2534,2529
+recall(?˜ëŠ˜?‰ì? ?¨ìˆ˜?ˆê¹Œ ?˜ì •?˜ì? ë§ê²ƒ,,,65.00%,,,,,92.75%,86.74%,92.94%,87.88%,88.39%,93.62%,89.66%,85.60%,89.97%,89.07%,88.80%,86.33%,91.30%,88.41%,,92.75%,92.50%
+precision,,,83.00%,,,,,77.47%,65.97%,84.96%,77.13%,81.44%,79.39%,78.20%,79.98%,72.42%,75.08%,83.10%,84.58%,83.84%,79.97%,,77.47%,77.32%
+f-measurement,,,72.91%,,,,,84.42%,74.94%,88.77%,82.16%,84.77%,85.92%,83.54%,82.69%,80.25%,81.48%,85.86%,85.44%,87.41%,83.98%,,84.42%,84.23%
+accuracy_conf_mat,,,79.00%,,,,,87.72%,81.05%,90.77%,85.60%,87.43%,88.82%,86.76%,85.62%,84.68%,85.41%,88.30%,87.68%,89.68%,86.06%,,87.72%,87.56%
+accuracy,83%,,0.795,,78.10%,57.08%,92.61%,91.56%,,95.14%,89.30%,88.87%,91.07%,96.34%,84.12%,89.83%,83.88%,86.81%,95.70%,89.89%,89.68%,52.92%,97.32%,93.94%
+val_accuracy,87%,,,,80.50%,56.86%,82.73%,83.39%,,80.63%,81.74%,82.49%,82.40%,82.53%,82.79%,83.27%,82.49%,83.36%,83.10%,83.27%,82.57%,55.82%,85.33%,82.80%
+loss,,,,,0.4914,0.6833,0.1877,21.71%,,0.139,0.2833,0.2856,0.2268,0.1003,0.373,0.2538,0.37785,0.3203,0.1222,0.2586,0.2573,0.7095,7.95%,16.45%
+val_loss,,,,,0.4657,0.6847,0.4302,48.74%,,0.5731,0.497,0.4269,0.4513,0.537,0.399,0.4243,0.4114,0.4084,0.5272,0.4601,0.4039,0.6868,4.88%,45.41%
+log_loss,,,0.494,,,,,,,,,,,,,,,,,,,,,
+? ì§œ,2020. 3. 17,2020. 3. 17,2020. 3. 17,,2020. 3.18,,2020.3.25,2020.3.25,2020.3.25,2020.3.26,2020.3.26,2020.3.26,2020.3.26,2020.3.28,2020.3.28,2020.3.28,2020.3.30,2020.4.2,2020.4.8,2020.4.16,2020.4.22,2020.4.28,2020.5.3,2020.5.12
+ë¹„ê³ ,"BERT ?Œì´ì°¸ì—???¤í–‰?´ì•¼??(tokenization.py??gfile ì½”ë“œ?¤ë¥˜)
+BERT-Baseline","?¥í›„ ?°ì´???„ì²˜ë¦?flow ?•ë¦½??ê²½ìš° edge case ?„í•œ 
+ë¬¸ë²•/?ˆì ê°œì„ ?‘ì—… tool ë°??ìš©ë°©ì•ˆ ëª¨ìƒ‰",(ë¬¸ì–´ì²? êµ¬ì–´ì²??¬ë????°ë¥¸ target ? ë¢°??ì¸¡ì • ë°©ì•ˆ ëª¨ìƒ‰),,"LSTM ì½”ë“œ???Œì´ì°¸ì—???•ì¸?˜ê¸°
+(ê°€?í™˜ê²??¤ì • ?Œë¬¸)
+
+3/19 ~ 3/24
+-ê°œì¸?ìœ¼ë¡?ì·¨ì—…ì¤€ë¹?
+
+3/25??3/27
+- kaggle notebook ?‘ì„±
+- ê¸°ê³„?™ìŠµ, ?¥ëŸ¬??ë³€???µí•© ?‘ì—…
+- ppt?‘ì—…?ˆì •
+-?¬ëŸ¬ ?Œê³ ë¦¬ì¦˜ ?ìš© ?ŒìŠ¤??-ê²°ê³¼ë¬??•ë¦¬
+
+
+####?´ê? ?¸ê±°ë©?25???´ì „????ê²?,GloVe ê°€ TF-IDF ë³´ë‹¤",,,,,,,,,,,,,,,,,,,
+?±ëŠ¥???«ë‹¤??ê²?ì¦ëª…,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+?¬ëŸ¬ ëª¨ë¸ ì¤‘ì—??BERTê°€ ,,,,,,,,,,,,,,,,,,,,,,,,
+"?±ëŠ¥??ê°€??ì¢‹ë‹¤??ê²??•ì¸""","dropout ë¯¸ì ??
+?¤ë²„?¼íŒ…",,,"epoch 4???ˆë¬´ ë§ì? ?™ìŠµ???˜ëŠ” ê²?ê°™ìŒ
+?¤ìŒ?€ ì¤„ì´?„ë¡","?ˆë ¨?°ì´???‘ì´ ë§ì? ê²?ê°™ì•„??ê²€ì¦??°ì´?°ë? ?˜ë ¸?”ë‹ˆ ?ë‹¹??ê°œì„ 
+
+epoch = 3 ?¼ë¡œ ì¤„ì„","ê²€ì¦ë°?´í„° ë¹„ìœ¨ ê·¸ë?ë¡?ê°?lr ê°’ì„ ?‘ê²Œ ì¡°ì ˆ
+
+ì°¨ì´??ì¢í?ì§€???ˆë ¨?°ì´?°ì˜
+?•í™•?„ëŠ” ?ì  ?¨ì–´ì§€ê³?ê²€ì¦ë°?´í„°???•í™•?„ëŠ” ?¬ë¼ê°€ê³??ˆìŒ
+
+recall/precision ë¹„ìœ¨ ?˜ì˜ì§€?ŠìŒ","
+target_big_corrected ?ìš©
+lr ?‘ì? ê°’ìœ¼ë¡??¤ì •
+
+?¤ì‹œ ?¤ë²„?¼íŒ… ê°?,epoch = 4 ?¤ì‹œ ?¤ë²„?¼íŒ…,target_big_corrected ?ìš©",,,,,,,,,,,,,,,,,
+batch-size = 16 (+4),,,,,,,,,,,,,,,,,,,,,,,,
+lr ?°ê°’?¼ë¡œ ?¤ì •,,,,,,,,,,,,,,,,,,,,,,,,
+epoch = 3?¼ë¡œ ì¤„ì„,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+batch-size ê°’ì´ ì»¤ì????´ëŠ?•ë„ ê°œì„ ?˜ëŠ” ?ì´ ë³´ì´?”ê²ƒ ê°™ìŒ,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+?€???•í™•?„ëŠ” ?¨ì–´ì§?,target_big_corrected ë¥??ìš©??commit 9ê°€ ???±ëŠ¥??ì¢‹ìŒ,"batch-size = 20(+4)
+target_corrected = True
+?¤ì • ë³€ê²?
++ BERT??ê²½ìš° batch-size???í–¥??ë§ì´ ë°›ëŠ”?¤ê³  ??
++ ?”ì¦˜ ?ì—°??ì²˜ë¦¬?ì„œ
+batch-sizeë¥??¬ê²Œ ê°€?¸ê??”ê²Œ ?¨ê³¼?ì´?¼ëŠ”
+?˜ê²¬?´ìˆ?¤ê³  ??,lrë§??‘ê²Œ ì¡°ì ˆ",,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+recall/precision ë¹„ìœ¨????ìª½ë§Œ ?¬ì??Šê³  ê°€???ë‹¹????ì¤‘ì— ?œìª½ë§??ˆë¬´ ?’ê²Œ ??ê²½ìš°,,,,,,,,,,,,,,,,,,,,,,,,
+ë¬¸ì œê°€ ?œë‹¤ê³???,"The dropout probability is always
+kept at 0.1
+
+batch-size = 25ë¡??ˆìœ¼??ë©”ëª¨ë¦?ë¶€ì¡?ë¬¸ì œ ë°œìƒ(GPU ?±ëŠ¥ë¬¸ì œ)
+
+dropout 0.1ë¡?ë³€ê²?lr ?°ê°’?¼ë¡œ ì¡°ì •
+
+dropout 0.2 ?´ìƒ ?´ì•¼? ë“¯
+?ˆë ¨?°ì´?°ì— ?¤ì‹œ ì§‘ì¤‘?œê²ƒ ê°™ìŒ","dropoutë§??˜ë ¤ë´?commit 13ë³´ë‹¤ ?¨ì”¬ ?˜ì•„ì§?,,batch size ì¤„ì??”ë° ë©”ëª¨ë¦?ë¶€?˜ë¡œ ?¸í•´ ?ëŸ¬ ë°œìƒ",,,,,,,,,,,,,,,,,,,,,,
+session restart ???™ì‘,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+?•í™•?„ê? ì¢‹ì? ?Šì????¤ë²„?¼íŒ… ë°œìƒ?€ x),,,,,,,,,,,,,,,,,,,,,,,,
+confusion matrix ?ì„œ 100%ê°€ ?˜ì˜´(?¤ë¥˜??),,,,,,,,,,,,,,,,,,,,,,,,
+"4358/4358""",,,,,,,,,,,,,,,,,,,,,,,,
