@@ -74,7 +74,7 @@ embedding
 - 코드리뷰는 Slack을 연동하여 사용
 
 ## 개선점
-- Tweepy 라이브러리를 통한 twitter 데이터 수령으로 추가 DB확보하여 정확도 향상 
+- Hyper-parameter를 조정해가며 정확도의 변화 체크
   
   
   
